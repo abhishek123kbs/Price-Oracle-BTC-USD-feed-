@@ -3,7 +3,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  // Compile contracts before deploying
+  // Compile the contracts before deploying
   await hre.run("compile");
 
   console.log("Deploying PriceOracleBTCUSD...");
@@ -23,3 +23,4 @@ main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
+
