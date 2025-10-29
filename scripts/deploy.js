@@ -6,7 +6,7 @@ async function main() {
   // Compile the contracts before deploying
   await hre.run("compile");
 
-  console.log("Deploying PriceOracleBTCUSD...");
+  console.log("Deploying PriceOracleBTCUSD....");
 
   const initialPrice = 65000; // Example initial BTC/USD price
   const PriceOracleBTCUSD = await hre.ethers.getContractFactory("PriceOracleBTCUSD");
@@ -23,4 +23,5 @@ main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
+
 
