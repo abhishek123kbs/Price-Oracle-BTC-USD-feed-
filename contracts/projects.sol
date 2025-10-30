@@ -45,7 +45,7 @@ contract PriceOracleBTCUSD {
     }
 
     function getPriceAt(uint256 _updateId) public view returns (uint256, uint256) {
-        require(_updateId > 0 && _updateId <= updateCount, "Invalid update ID");
+        require(_updateId > 0 && _updateId <= updateCount, "Invalid update ID.");
         PriceData memory data = priceHistory[_updateId];
         return (data.price, data.timestamp);
     }
@@ -56,3 +56,4 @@ contract PriceOracleBTCUSD {
         owner = _newOwner;
     }
 }
+
