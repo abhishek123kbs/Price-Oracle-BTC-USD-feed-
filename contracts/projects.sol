@@ -51,9 +51,10 @@ contract PriceOracleBTCUSD {
     }
 
     function transferOwnership(address _newOwner) public onlyOwner {
-        require(_newOwner != address(0), "Invalid address");
+        require(_newOwner != address(0), "Invalid address.");
         emit OwnerChanged(owner, _newOwner);
         owner = _newOwner;
     }
 }
+
 
